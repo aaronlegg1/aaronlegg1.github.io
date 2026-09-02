@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aaron Legg</title>
+  <meta name="description" content="Aaron Legg — ChemE + ORE at Cornell. Quant, cyber, and systems." />
+
+  <!-- Fonts: Space Mono for the display name, JetBrains Mono for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Right-edge generative ASCII field -->
+  <pre id="ascii" aria-hidden="true"></pre>
+
+  <main class="page">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">[light]</button>
+
+    <!-- Particle name -->
+    <header class="hero">
+      <canvas id="name-canvas" role="img" aria-label="Aaron Legg"></canvas>
+      <p class="tagline">
+        ChemE + ORE student at <span class="accent">Cornell</span>.
+        Army ROTC <span class="accent">17A Cyber</span> cadet. Building toward quant.
+      </p>
+      <nav class="links">
+        <a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">linkedin</a>
+        <a href="https://github.com/YOUR-HANDLE" target="_blank" rel="noopener">github</a>
+        <a href="assets/resume.pdf" target="_blank" rel="noopener">resume</a>
+        <a href="#projects">research</a>
+        <a href="#projects">demo</a>
+      </nav>
+    </header>
+
+    <section class="sections">
+
+      <!-- EXPERIENCE -->
+      <details class="acc" id="experience">
+        <summary>EXPERIENCE</summary>
+        <div class="acc-body">
+
+          <details class="acc acc--sub">
+            <summary>Army ROTC &mdash; Cadet</summary>
+            <div class="acc-body">
+              <p>Contracted cadet, <span class="accent">17A Cyber Warfare</span> branch select. Hold an active <span class="accent">Secret</span> clearance. Balancing the full military-science track with a double-major engineering load.</p>
+            </div>
+          </details>
+
+          <details class="acc acc--sub">
+            <summary>Cornell Football &mdash; Quarterback</summary>
+            <div class="acc-body">
+              <p>Roster quarterback in the Ivy League while carrying a Chemical Engineering and ORE double major on a 3.5-year track.</p>
+            </div>
+          </details>
+
+          <details class="acc acc--sub">
+            <summary>Internship &mdash; [ADD YOUR ROLE]</summary>
+            <div class="acc-body">
+              <p>Placeholder. Drop your quant / SWE / defense internship here with verb-first, metric-led bullets.</p>
+            </div>
+          </details>
+
+        </div>
+      </details>
+
+      <!-- PROJECTS -->
+      <details class="acc" id="projects">
+        <summary>PROJECTS</summary>
+        <div class="acc-body">
+
+          <details class="acc acc--sub">
+            <summary>HMM Regime-Switching Trading Model</summary>
+            <div class="acc-body">
+              <p>Gaussian Hidden Markov Model that classifies market regimes and switches strategy accordingly. Uses BIC for model selection, walk-forward backtesting to avoid look-ahead bias, and tracks Sharpe across regimes. My primary quant differentiator, framed around ETP market making.</p>
+              <div class="gallery">
+                <div class="shot" data-label="regime plot"></div>
+                <div class="shot" data-label="equity curve"></div>
+                <div class="shot" data-label="transition matrix"></div>
+              </div>
+              <div class="proj-links">
+                <a href="#">Try it live</a><span class="dot">&middot;</span><a href="#">View GitHub</a>
+              </div>
+            </div>
+          </details>
+
+          <details class="acc acc--sub">
+            <summary>Kalshi Mispricing &amp; Arbitrage Engine</summary>
+            <div class="acc-body">
+              <p>Low-latency framework that ingests the Kalshi REST API and hunts both structural risk-free arbitrage and statistical mispricing across contracts. v1 closes the loop with live execution, not just detection. Python, since the edges are slow enough not to compete on raw latency.</p>
+              <div class="gallery">
+                <div class="shot" data-label="orderbook feed"></div>
+                <div class="shot" data-label="signal monitor"></div>
+                <div class="shot" data-label="fills log"></div>
+              </div>
+              <div class="proj-links">
+                <a href="#">Try it live</a><span class="dot">&middot;</span><a href="#">View GitHub</a>
+              </div>
+            </div>
+          </details>
+
+          <details class="acc acc--sub">
+            <summary>Dual-Class Share Arbitrage</summary>
+            <div class="acc-body">
+              <p>Stat-arb basket across 6&ndash;10 dual-class pairs (GOOGL/GOOG, UAA/UA, and others). Trades cointegration and z-score signals with Kalman-filter dynamic hedge ratios so the spread stays hedged as the relationship drifts.</p>
+              <div class="gallery">
+                <div class="shot" data-label="spread z-score"></div>
+                <div class="shot" data-label="hedge ratio"></div>
+                <div class="shot" data-label="pnl by pair"></div>
+              </div>
+              <div class="proj-links">
+                <a href="#">View GitHub</a>
+              </div>
+            </div>
+          </details>
+
+          <details class="acc acc--sub">
+            <summary>UFC Fight-Outcome Predictor</summary>
+            <div class="acc-body">
+              <p>Random Forest trained and backtested on ~12 years of UFC data. Features include takedown and strike accuracy, takedown defense, age, resume strength, and activity. Outputs a per-fighter win probability, a confidence score, and the most likely method of victory (decision, TKO/KO, or submission). Retrains after every card.</p>
+              <div class="gallery">
+                <div class="shot" data-label="card predictions"></div>
+                <div class="shot" data-label="feature importance"></div>
+                <div class="shot" data-label="calibration"></div>
+              </div>
+              <div class="proj-links">
+                <a href="#">Try it live</a><span class="dot">&middot;</span><a href="#">View GitHub</a>
+              </div>
+            </div>
+          </details>
+
+          <details class="acc acc--sub">
+            <summary>VocaLedger &mdash; Voice-Logging Finance App</summary>
+            <div class="acc-body">
+              <p>Voice-first personal finance app: speak a transaction, it parses and files it. React + Vite front end, FastAPI backend, Whisper + GPT + Claude and five Google APIs. Privacy-by-design with least-privilege scoping and no bank-account linkage. Deployed on Vercel and Render.</p>
+              <div class="gallery">
+                <div class="shot" data-label="voice capture"></div>
+                <div class="shot" data-label="ledger view"></div>
+                <div class="shot" data-label="category split"></div>
+              </div>
+              <div class="proj-links">
+                <a href="#">View Site</a><span class="dot">&middot;</span><a href="#">View GitHub</a>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </details>
+
+      <!-- HACKATHONS -->
+      <details class="acc" id="hackathons">
+        <summary>HACKATHONS</summary>
+        <div class="acc-body">
+          <details class="acc acc--sub">
+            <summary>[ADD HACKATHON] &mdash; [Award / Track]</summary>
+            <div class="acc-body">
+              <p>Placeholder. One line on what you built, the stack, and the result.</p>
+            </div>
+          </details>
+        </div>
+      </details>
+
+      <!-- ABOUT -->
+      <details class="acc" id="about">
+        <summary>SOME OTHER THINGS ABOUT ME</summary>
+        <div class="acc-body">
+          <p>Scottsdale, Arizona. Transferred to Cornell from Scottsdale Community College. Play violin. Aiming at the Cornell <span class="accent">CFEM</span> MEng, then a Princeton <span class="accent">ORFE</span> PhD, with quant finance and defense/cyber both on the table.</p>
+          <p>Reach me at <a href="mailto:all288@cornell.edu">all288@cornell.edu</a>.</p>
+        </div>
+      </details>
+
+    </section>
+  </main>
+
+  <script src="js/ascii.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

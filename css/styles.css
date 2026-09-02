@@ -1,0 +1,212 @@
+/* ===== Theme tokens ===== */
+:root {
+  --bg: #0e0d0c;
+  --fg: #e9e2d0;
+  --muted: #8f887a;
+  --accent: #cf5b48;
+  --rule: #3a352d;
+  --ascii: rgba(233, 226, 208, 0.30);
+  --font-body: "JetBrains Mono", ui-monospace, "Courier New", monospace;
+  --font-display: "Space Mono", ui-monospace, monospace;
+  --content-max: 720px;
+  --sidebar-w: 200px;
+}
+
+html[data-theme="light"] {
+  --bg: #f4f0e6;
+  --fg: #1c1a17;
+  --muted: #6b6558;
+  --accent: #b8442e;
+  --rule: #cfc7b5;
+  --ascii: rgba(28, 26, 23, 0.22);
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.25s ease, color 0.25s ease;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+a:hover { color: var(--accent); }
+
+.accent { color: var(--accent); }
+
+/* ===== ASCII sidebar ===== */
+#ascii {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: var(--sidebar-w);
+  margin: 0;
+  padding: 8px 6px 0 0;
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.05;
+  letter-spacing: 0;
+  color: var(--ascii);
+  white-space: pre;
+  overflow: hidden;
+  pointer-events: none;
+  text-align: right;
+  user-select: none;
+  z-index: 0;
+}
+
+/* ===== Page layout ===== */
+.page {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-max);
+  margin: 0;
+  padding: 72px 24px 120px 56px;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: calc(var(--sidebar-w) + 24px);
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 3;
+}
+.theme-toggle:hover { color: var(--accent); }
+
+/* ===== Hero ===== */
+.hero { margin-bottom: 64px; }
+
+#name-canvas {
+  display: block;
+  width: 100%;
+  height: 130px;
+  margin-bottom: 8px;
+}
+
+.tagline {
+  color: var(--muted);
+  margin: 0 0 26px 0;
+  max-width: 60ch;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+.links a { font-weight: 500; }
+
+/* ===== Accordions ===== */
+.acc { border: none; }
+
+.acc > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--rule);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  font-size: 14px;
+  position: relative;
+}
+.acc > summary::-webkit-details-marker { display: none; }
+
+/* Disclosure caret */
+.acc > summary::after {
+  content: "\25BC";
+  font-size: 10px;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+.acc[open] > summary::after { transform: rotate(180deg); }
+.acc > summary:hover { color: var(--accent); }
+.acc > summary:hover::after { color: var(--accent); }
+
+/* Nested (project/experience) rows are lighter weight */
+.acc--sub > summary {
+  letter-spacing: 0.3px;
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.acc-body {
+  padding: 6px 0 22px 0;
+}
+.acc--sub > .acc-body {
+  padding: 10px 0 20px 0;
+}
+
+.acc-body p { margin: 0 0 14px 0; max-width: 66ch; }
+.acc-body p:last-child { margin-bottom: 0; }
+
+/* ===== Project galleries ===== */
+.gallery {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 6px 0 12px 0;
+  scrollbar-width: thin;
+}
+.shot {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 190px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  position: relative;
+  background:
+    repeating-linear-gradient(45deg,
+      transparent, transparent 9px,
+      color-mix(in srgb, var(--rule) 40%, transparent) 9px,
+      color-mix(in srgb, var(--rule) 40%, transparent) 10px);
+}
+.shot::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.proj-links { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+.proj-links a { font-weight: 500; }
+.dot { color: var(--muted); }
+
+/* ===== Responsive ===== */
+@media (max-width: 780px) {
+  :root { --sidebar-w: 0px; }
+  #ascii { display: none; }
+  .theme-toggle { right: 20px; }
+  .page { padding: 60px 20px 100px 20px; }
+  #name-canvas { height: 92px; }
+}
+
+/* ===== Reduced motion: still renders, just no looping animation ===== */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
