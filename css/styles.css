@@ -162,6 +162,34 @@ a:hover { color: var(--accent); }
 .acc-body p { margin: 0 0 14px 0; max-width: 66ch; }
 .acc-body p:last-child { margin-bottom: 0; }
 
+/* Role date / location line under a sub-summary */
+.meta {
+  color: var(--muted);
+  font-size: 12.5px;
+  letter-spacing: 0.3px;
+  margin: 0 0 12px 0 !important;
+}
+
+/* Metric-led bullets */
+.acc-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 68ch;
+}
+.acc-body li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+}
+.acc-body li::before {
+  content: "\2013";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
+.acc-body li:last-child { margin-bottom: 0; }
+
 /* ===== Project galleries ===== */
 .gallery {
   display: flex;
