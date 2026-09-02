@@ -11,6 +11,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
+  <!-- Favicon: inline SVG, no extra request -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230e0d0c'/%3E%3Ctext x='16' y='22' font-family='ui-monospace,Menlo,monospace' font-size='17' font-weight='700' fill='%23cf5b48' text-anchor='middle'%3EAL%3C/text%3E%3C/svg%3E" />
+
+  <!-- Link previews (iMessage, Slack, LinkedIn, X) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aaronlegg1.github.io/" />
+  <meta property="og:title" content="Aaron Legg" />
+  <meta property="og:description" content="ChemE + ORE at Cornell. Army ROTC 17A Cyber cadet. Building toward quant." />
+  <meta property="og:image" content="https://aaronlegg1.github.io/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0e0d0c" />
+
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -29,7 +41,7 @@
       </p>
       <nav class="links">
         <a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">linkedin</a>
-        <a href="https://github.com/YOUR-HANDLE" target="_blank" rel="noopener">github</a>
+        <a href="https://github.com/aaronlegg1" target="_blank" rel="noopener">github</a>
         <a href="assets/resume.pdf" target="_blank" rel="noopener">resume</a>
         <a href="#projects">research</a>
         <a href="#projects">demo</a>
@@ -82,7 +94,7 @@
                 <div class="shot" data-label="transition matrix"></div>
               </div>
               <div class="proj-links">
-                <a href="#">Try it live</a><span class="dot">&middot;</span><a href="#">View GitHub</a>
+                <a href="https://github.com/aaronlegg1/TradingBot" target="_blank" rel="noopener">View GitHub</a>
               </div>
             </div>
           </details>
@@ -113,6 +125,21 @@
               </div>
               <div class="proj-links">
                 <a href="#">View GitHub</a>
+              </div>
+            </div>
+          </details>
+
+          <details class="acc acc--sub">
+            <summary>Monte Carlo Option Pricer</summary>
+            <div class="acc-body">
+              <p>European call/put pricer in Java built on geometric Brownian motion. Simulates 1M+ paths in <span class="accent">~100&nbsp;ms</span> and lands within <span class="accent">0.01%</span> of the Black&ndash;Scholes closed form. Box&ndash;Muller transform for normal draws, 95% confidence intervals on every estimate, and put&ndash;call parity as a self-check. O(N) time, O(1) space, driven from an interactive CLI.</p>
+              <div class="gallery">
+                <div class="shot" data-label="convergence vs BSM"></div>
+                <div class="shot" data-label="path fan"></div>
+                <div class="shot" data-label="CLI session"></div>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/aaronlegg1/MontyCarloSimulator" target="_blank" rel="noopener">View GitHub</a>
               </div>
             </div>
           </details>
