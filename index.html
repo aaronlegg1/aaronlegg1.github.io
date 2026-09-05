@@ -60,21 +60,9 @@
             <div class="acc-body">
               <p class="meta">Aug 2026 &ndash; present &middot; Ithaca, NY</p>
               <ul>
-                <li>Designed and taught an <span class="accent">8-week quant curriculum</span> covering Python, statistical arbitrage, and backtesting to 43 new members.</li>
-                <li>Directed 6 research teams and standardized a shared Python backtesting framework that cut strategy-development time by <span class="accent">30%</span>.</li>
+                <li>Designed and taught an <span class="accent">8-week quant curriculum</span> on Python, statistical arbitrage, and backtesting to 43 new members.</li>
+                <li>Directed 6 research teams and standardized a shared Python backtesting framework, cutting strategy-development time <span class="accent">30%</span>.</li>
                 <li>Mentored members through a paper-trading competition; top teams reached a <span class="accent">1.5 Sharpe</span> over 10 weeks.</li>
-              </ul>
-            </div>
-          </details>
-
-          <details class="acc acc--sub">
-            <summary>Cornell Systems Engineering &mdash; Teaching Assistant</summary>
-            <div class="acc-body">
-              <p class="meta">Aug 2026 &ndash; present &middot; SYSEN 6170, Quantitative Foundations of Systems Engineering</p>
-              <ul>
-                <li>Ran weekly office hours and recitations for <span class="accent">30 PhD students</span>, resolving 100+ questions on linear optimization.</li>
-                <li>Graded 5 problem sets and 5 modeling case studies, focused on optimization formulations in Python and MATLAB.</li>
-                <li>Advised 8 student teams through 25-page final projects on model formulation and validation of policy interventions.</li>
               </ul>
             </div>
           </details>
@@ -84,7 +72,7 @@
             <div class="acc-body">
               <p class="meta">Jun 2026 &ndash; Aug 2026 &middot; Supply Chain Management &middot; Scottsdale, AZ</p>
               <ul>
-                <li>Raised ordering efficiency <span class="accent">18%</span> by deploying an AI agent that autonomously reordered out-of-stock products.</li>
+                <li>Raised ordering efficiency <span class="accent">18%</span> by deploying an AI agent that autonomously reordered out-of-stock products from POS data.</li>
                 <li>Cut void transactions per shift <span class="accent">40%</span> by training 20+ associates on tender, coupon, and price-check standards.</li>
                 <li>Drove till variance under <span class="accent">$2/shift</span> by auditing 5+ tills daily across 3 registers.</li>
               </ul>
@@ -96,9 +84,30 @@
             <div class="acc-body">
               <p class="meta">May 2025 &ndash; Aug 2025 &middot; Scottsdale, AZ</p>
               <ul>
-                <li>Improved portfolio returns <span class="accent">7.13%</span> by running Monte Carlo risk simulations on six-figure investment accounts.</li>
-                <li>Reduced downside risk exposure <span class="accent">18%</span> through performance attribution and asset-allocation optimization.</li>
-                <li>Delivered bi-weekly P&amp;L summaries and strategy reviews to the executive board.</li>
+                <li>Ran vectorized Monte Carlo risk simulations on six-figure investment accounts, quantifying <span class="accent">VaR</span> and drawdown distributions.</li>
+                <li>Reduced downside-risk exposure <span class="accent">18%</span> through performance attribution and asset-allocation optimization in Excel/VBA.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="acc acc--sub">
+            <summary>Cornell University &mdash; Teaching Assistant, SYSEN 6170</summary>
+            <div class="acc-body">
+              <p class="meta">Aug 2026 &ndash; present &middot; Quantitative Foundations of Systems Engineering &middot; Ithaca, NY</p>
+              <ul>
+                <li>Led office hours and recitations for <span class="accent">30 PhD students</span>, resolving 100+ convex-optimization questions.</li>
+                <li>Graded problem sets and modeling case studies on Python/MATLAB optimization formulations; mentored 8 teams through capstone model formulation, validation, and policy analysis.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="acc acc--sub">
+            <summary>Cornell University &mdash; Teaching Assistant, CEE 5980</summary>
+            <div class="acc-body">
+              <p class="meta">Aug 2025 &ndash; present &middot; Decision Framing and Analytics &middot; Ithaca, NY</p>
+              <ul>
+                <li>Supported <span class="accent">30+ graduate students</span> in office hours; graded homework and quizzes on decision trees and multi-objective analytics.</li>
+                <li>Advised teams on decision-analysis capstones spanning problem framing, alternative generation, and triple-bottom-line evaluation.</li>
               </ul>
             </div>
           </details>
@@ -114,7 +123,7 @@
             <summary>Cornell Sprint Football &mdash; Quarterback</summary>
             <div class="acc-body">
               <p class="meta">Aug 2024 &ndash; Aug 2025 &middot; freshman season &middot; Ithaca, NY</p>
-              <p>Played quarterback while carrying a Chemical Engineering and ORE double major.</p>
+              <p>Played quarterback while carrying a Chemical Engineering and ORIE double major.</p>
             </div>
           </details>
 
@@ -143,9 +152,9 @@
             <div class="acc-body">
               <p>Gaussian Hidden Markov Model that classifies market regimes and switches strategy accordingly. My primary quant project.</p>
               <ul>
-                <li>Eliminated look-ahead bias with forward-algorithm filtered inference and <span class="accent">BIC</span> model selection.</li>
-                <li>Capped max drawdown under <span class="accent">10%</span> via volatility-rank allocation (60&ndash;95% exposure, 1.25&times; leverage) across 10 equities.</li>
-                <li>Built a separate risk layer: tiered circuit breakers, 60-day correlation caps, and 100-run Monte Carlo cash-gap stress testing.</li>
+                <li>Built a modular, vectorized Python backtesting engine with Gaussian-HMM forward-algorithm filtered inference and <span class="accent">BIC</span> model selection, eliminating look-ahead bias across 10 equities.</li>
+                <li>Capped max drawdown under <span class="accent">10%</span> via a volatility-rank allocation algorithm (60&ndash;95% exposure, 1.25&times; leverage).</li>
+                <li>Shipped a separate risk layer with tiered circuit breakers, 60-day correlation caps, and 100-run Monte Carlo cash-gap stress testing.</li>
               </ul>
               <div class="gallery">
                 <div class="shot" data-label="regime plot"></div>
@@ -193,9 +202,8 @@
             <div class="acc-body">
               <p>High-performance European call/put pricing engine in Java, built on geometric Brownian motion and driven from an interactive CLI.</p>
               <ul>
-                <li>Hit <span class="accent">0.01%</span> pricing error against the Black&ndash;Scholes closed form while simulating <span class="accent">1M+</span> stochastic paths.</li>
-                <li>Improved computation speed <span class="accent">35%</span> by optimizing Box&ndash;Muller sampling down to O(N) time and O(1) space.</li>
-                <li>Validated reliability with put&ndash;call parity testing and comparison against weekly average EFX futures.</li>
+                <li>Hit <span class="accent">0.01%</span> error versus the Black&ndash;Scholes closed form over <span class="accent">1M+</span> stochastic paths.</li>
+                <li>Improved computation speed <span class="accent">35%</span> by optimizing Box&ndash;Muller sampling to O(N) time and O(1) space; validated via put&ndash;call parity and EFX futures comparison.</li>
               </ul>
               <div class="gallery">
                 <div class="shot" data-label="convergence vs BSM"></div>
@@ -228,9 +236,9 @@
             <div class="acc-body">
               <p>Voice-first personal finance app: speak a transaction, it parses and files it. React + Vite front end, FastAPI backend. Privacy-by-design &mdash; least-privilege scoping, no bank-account linkage. Deployed on Vercel and Render.</p>
               <ul>
-                <li>Achieved <span class="accent">sub-3-second</span> voice-to-transaction latency with a 3-model pipeline (Whisper, GPT, Claude) on FastAPI.</li>
-                <li>Cut manual ledger entry time <span class="accent">80%</span> with a natural-language interface parsing amount and FX across 99 languages.</li>
-                <li>Integrated <span class="accent">5 Google APIs</span> (OAuth 2.0, Sheets, Docs, Calendar) behind a unified token-refresh helper.</li>
+                <li>Architected an event-driven 3-model AI pipeline (Whisper, GPT, Claude) on containerized FastAPI at <span class="accent">sub-3s</span> speech-to-ledger latency.</li>
+                <li>Cut manual ledger-entry time <span class="accent">80%</span> with an asynchronous NLP interface parsing amount and FX across 99 languages.</li>
+                <li>Integrated <span class="accent">5 Google APIs</span> (OAuth 2.0, Sheets, Docs, Calendar) behind a unified, fault-tolerant token-refresh service with least-privilege scoping.</li>
               </ul>
               <div class="gallery">
                 <div class="shot" data-label="voice capture"></div>
@@ -263,6 +271,19 @@
       </details>
 
       -->
+
+      <!-- SKILLS -->
+      <details class="acc" id="skills">
+        <summary>SKILLS</summary>
+        <div class="acc-body">
+          <p class="meta">LANGUAGES &amp; TOOLS</p>
+          <p>Python, C/C++, Java, Bash, SQL, Git, Perforce, Linux, Docker, ReactJS</p>
+          <p class="meta">LIBRARIES</p>
+          <p>NumPy, Pandas, scikit-learn, statsmodels, PyTorch, Hugging Face Transformers, FastAPI</p>
+          <p class="meta">QUANT / ML</p>
+          <p>Monte Carlo methods, Hidden Markov Models, backtesting, time-series modeling, supervised learning</p>
+        </div>
+      </details>
 
       <!-- ABOUT -->
       <details class="acc" id="about">
